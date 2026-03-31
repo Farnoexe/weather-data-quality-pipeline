@@ -233,11 +233,9 @@ No rainfall occurred during the captured time window.
 
 ## 💡 Design Decisions
 
-**CSV instead of Parquet:** chosen for simplicity and readability in Version 1
-
-**Validation in Python:** allows clear rule-based logic before data reaches the warehouse
-
-**Manual S3 upload:** keeps Version 1 focused before introducing automation
+-**CSV instead of Parquet:** chosen for simplicity and readability in Version 1
+-**Validation in Python:** allows clear rule-based logic before data reaches the warehouse
+-**Manual S3 upload:** keeps Version 1 focused before introducing automation
 
 ---
 
