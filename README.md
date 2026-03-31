@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project builds a beginner-friendly weather data quality pipeline using Python, Amazon S3, and Amazon Athena.
+This project builds an end-to-end batch data quality pipeline using Python, Amazon S3, and Amazon Athena.
 
 Hourly weather data is pulled from the Open-Meteo API, saved as raw JSON, flattened into CSV format, validated with Python, split into clean and quarantine datasets, uploaded manually to Amazon S3, and queried in Athena for verification and simple analysis.
 
@@ -231,6 +231,14 @@ No rainfall occurred during the captured time window.
 
 ---
 
+## 💡 Design Decisions
+
+**CSV instead of Parquet:** chosen for simplicity and readability in Version 1
+**Validation in Python:** allows clear rule-based logic before data reaches the warehouse
+**Manual S3 upload:** keeps Version 1 focused before introducing automation
+
+---
+
 ## 📌 Key Takeaways
 
 - clear separation of raw, flattened, clean, and quarantine layers
@@ -262,6 +270,8 @@ No rainfall occurred during the captured time window.
 ---
 
 ## ▶️ How to Run (Summary)
+
+Scripts are designes to be run sequentially from the project root.
 
 - Run ingestion script to fetch API data and save raw JSON
 - Run flatten script to convert JSON to CSV
