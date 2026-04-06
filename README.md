@@ -28,6 +28,8 @@ Build a portfolio-ready data quality pipeline that:
 
 ![Architecture](Images/architecture.png)
 
+Note: The S3 bucket name 'metroville-traffic-analytics' is reused across multiple projects in this portfolio for consistency and to simulate a shared data lake environment. Each project is isolated using distinct folder paths.
+
 ---
 
 ## ☁️ Why AWS?
@@ -42,8 +44,6 @@ This setup makes it possible to:
 - verify that the final outputs are usable for downstream analytics
 
 Version 1 uses manual upload to S3 and manual Athena queries to keep the scope focused and beginner-friendly.
-
-Note: The S3 bucket name 'metroville-traffic-analytics' is reused across multiple projects in this portfolio for consistency and to simulate a shared data lake environment. Each project is isolated using distinct folder paths.
 
 ---
 
